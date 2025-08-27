@@ -1,0 +1,8 @@
+# ドキュメント警告を無視
+Style/Documentation:
+  Enabled: false
+
+# 開発環境設定ファイルの長さチェックを無視
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/development.rb'
