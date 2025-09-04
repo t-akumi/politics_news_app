@@ -1,4 +1,4 @@
-# ベースイメージを指定（Ruby 3.1, Debianベースで安定）
+# Dockerfile (本番用)
 FROM ruby:3.1
 
 # 必要パッケージのインストール
@@ -8,13 +8,13 @@ RUN apt-get update -qq && \
 # 作業ディレクトリを作成
 WORKDIR /my_app
 
-# Gemfileをコピーし、bundle install
+# Gemfile をコピーして bundle install
 COPY Gemfile Gemfile.lock ./
-RUN gem install bundler -v 2.4.13  # バージョン固定
-RUN bundle install
+RUN gem install bundler -v 2.4.13
+RUN bundle install --without development test
 
 # アプリケーションコードをコピー
 COPY . .
 
-# デフォルトコマンド
-CMD ["bin/rails", "server", "-b", "0.0.0.0"]
+# デフォルトコマンド（Render はここを使って本番起動）
+CMD ["bin/rails", "server", "-b", "0.0.0.0", "-e", "production"]

@@ -1,6 +1,9 @@
 services:
   web:
-    build: .
+    image: politics_news_app_dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     command: bash -c "bundle exec rails server -b 0.0.0.0"
     volumes:
       - .:/my_app
