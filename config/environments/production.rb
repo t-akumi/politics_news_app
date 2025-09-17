@@ -3,6 +3,17 @@
 require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
+  # CSS読み込みが上手くいかないので追加した設定
+  # プリコンパイル済み assets を参照
+  config.assets.compile = false
+
+  # ディレクトリの digest 名のファイルを使う
+  config.assets.digest = true
+
+  # CSS/JS を圧縮
+  config.assets.css_compressor = :sass
+  config.assets.js_compressor = :terser
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -23,7 +34,9 @@ Rails.application.configure do
   # config.require_master_key = true
 
   # Disable serving static files from `public/`, relying on NGINX/Apache to do so instead.
-  # config.public_file_server.enabled = false
+
+  #　プリコンパイルされたファイルがpublic配下に作成されるので、これを配信して使用できるようにする設定
+  config.public_file_server.enabled = true
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
