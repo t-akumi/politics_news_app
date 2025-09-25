@@ -12,7 +12,7 @@ Rails.application.configure do
 
   # CSS/JS を圧縮
   config.assets.css_compressor = :sass
-  config.assets.js_compressor = :nil
+  #config.assets.js_compressor = :nil
 
   # Settings specified here will take precedence over those in config/application.rb.
 
