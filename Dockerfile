@@ -8,6 +8,10 @@ RUN apt-get update -qq && \
 # 作業ディレクトリを作成
 WORKDIR /my_app
 
+# Build-time 引数として master key を受け取る
+ARG RAILS_MASTER_KEY
+ENV RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
+
 # Gemfile をコピーして bundle install
 COPY Gemfile Gemfile.lock package.json yarn.lock ./
 #RUN yarn install
