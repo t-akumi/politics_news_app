@@ -1,0 +1,7 @@
+{
+    "name": "politics_news_app",
+    "version": "1.0.0",
+    "devDependencies": {
+      "terser": "^6.9.0"
+    }
+}
