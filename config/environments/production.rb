@@ -12,7 +12,7 @@ Rails.application.configure do
 
   # CSS/JS を圧縮
   config.assets.css_compressor = :sass
-  #config.assets.js_compressor = :nil
+  # config.assets.js_compressor = :nil
 
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -35,7 +35,7 @@ Rails.application.configure do
 
   # Disable serving static files from `public/`, relying on NGINX/Apache to do so instead.
 
-  #　プリコンパイルされたファイルがpublic配下に作成されるので、これを配信して使用できるようにする設定
+  # 　プリコンパイルされたファイルがpublic配下に作成されるので、これを配信して使用できるようにする設定
   config.public_file_server.enabled = true
 
   # Compress CSS using a preprocessor.
