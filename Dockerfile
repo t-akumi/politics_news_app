@@ -21,7 +21,7 @@ RUN bundle install --without development test
 COPY . .
 
 # プリコンパイル（本番環境用）
-#RUN RAILS_ENV=production bin/rails assets:precompile
+RUN RAILS_ENV=production bin/rails assets:precompile
 
 # デフォルトコマンド（Render はここを使って本番起動）
 CMD ["bin/rails", "server", "-b", "0.0.0.0", "-e", "production"]
