@@ -1,3 +1,101 @@
-.home-title{
-    color: rgb(47, 161, 181);
+/* ベーススタイル */
+body {
+font-family: "Helvetica Neue", Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f9fafe;
+color: #333;
+}
+
+/* ヘッダー */
+.app-header {
+background-color: #a8d5e2;
+padding: 20px;
+text-align: center;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+margin: 0;
+font-size: 24px;
+}
+
+/* ニュースコンテナ */
+.news-container {
+background-color: #ffffff;
+border: 1px solid #d1e7f0;
+border-radius: 8px;
+padding: 20px;
+margin: 20px auto;
+max-width: 800px;
+}
+
+.news-title {
+margin-top: 0;
+font-size: 20px;
+color: #1a3f5f;
+}
+
+.news-summary {
+font-size: 16px;
+line-height: 1.5;
+margin-top: 10px;
+}
+
+/* チャットエリア */
+.chat-container {
+background-color: #ffffff;
+border: 1px solid #d1e7f0;
+border-radius: 8px;
+max-width: 800px;
+margin: 20px auto;
+padding: 10px;
+display: flex;
+flex-direction: column;
+}
+
+.chat-header {
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.chat-messages {
+flex: 1;
+border: 1px solid #e0e0e0;
+border-radius: 6px;
+padding: 10px;
+height: 200px;
+overflow-y: auto;
+background-color: #f1f8fa;
+margin-bottom: 10px;
+}
+
+.chat-message {
+margin-bottom: 10px;
+}
+
+.chat-message.bot {
+color: #1a3f5f;
+font-weight: bold;
+}
+
+/* 質問ボタン */
+.chat-options {
+display: flex;
+gap: 10px;
+}
+
+.chat-option {
+flex: 1;
+padding: 10px;
+background-color: #a8d5e2;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 14px;
+transition: background-color 0.2s;
+}
+
+.chat-option:hover {
+background-color: #7fc1d8;
 }
