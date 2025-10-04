@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.1.7'
+ruby '3.2.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.0'
@@ -31,6 +31,10 @@ gem 'jbuilder'
 # CSSのプリコンパイルに必要
 gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
+
+# open aiのAPI
+gem 'openai', '~> 0.26.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -56,6 +60,8 @@ group :development, :test do
   gem 'rubocop', '~> 1.30', require: false
   # 　rubocopのrails向け（railsが推奨する処理の書き方のチェック）
   gem 'rubocop-rails', '~> 2.26', require: false
+
+  gem 'dotenv-rails'
 end
 
 group :development do

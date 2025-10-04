@@ -1,5 +1,5 @@
 # Dockerfile (本番用)
-FROM ruby:3.1
+FROM ruby:3.2.2
 
 # 必要パッケージのインストール
 RUN apt-get update -qq && \
@@ -11,6 +11,9 @@ WORKDIR /my_app
 # Build-time 引数として master key を受け取る
 ARG RAILS_MASTER_KEY
 ENV RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
+
+ARG OPENAI_API_KEY
+ENV OPENAI_API_KEY=${OPENAI_API_KEY}
 
 # Gemfile をコピーして bundle install
 COPY Gemfile Gemfile.lock package.json yarn.lock ./

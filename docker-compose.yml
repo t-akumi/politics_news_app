@@ -13,10 +13,11 @@ services:
       - db
     environment:
       RAILS_ENV: development
-      DATABASE_HOST: db
-      DATABASE_USER: postgres
-      DATABASE_PASSWORD: postgres
-      DATABASE_NAME: my_app_development
+      DATABASE_URL: postgres://postgres:postgres@db:5432/my_app_database
+      #DATABASE_HOST: db
+      #DATABASE_USER: postgres
+      #DATABASE_PASSWORD: postgres
+      #DATABASE_NAME: my_app_development
 
   db:
     image: postgres:15
