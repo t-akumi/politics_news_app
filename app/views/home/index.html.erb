@@ -1,8 +1,8 @@
 <!-- ニュースコンテナ -->
 <section class="news-container">
-  <h2 class="news-title">今日の政治ニュースタイトル</h2>
+  <h2 class="news-title"><%= @news.title %></h2>
   <p class="news-summary">
-    こちらにニュースの概要が入ります。約300文字で簡潔にまとめられています。
+    <%= @news.summary %>
   </p>
 </section>
 
