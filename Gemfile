@@ -35,6 +35,10 @@ gem 'uglifier', '>= 1.3.0'
 # open aiのAPI
 gem 'openai', '~> 0.26.0'
 
+gem "sprockets-rails"  # 本番環境へのパイプライン
+
+gem "sassc-rails"       # SCSSをCSSに変換
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

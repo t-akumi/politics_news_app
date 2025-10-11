@@ -24,7 +24,6 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV.fetch("DATABASE_URL", "postgres://postgres:postgres@db:5432/my_app_database") %>
   database: my_app_database
 
 
@@ -84,7 +83,7 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV.fetch("DATABASE_URL") %>
+  url: <%= ENV['DATABASE_HOST'] %>
   #adapter: postgresql
   #encoding: unicode
   #host: <%= ENV['DATABASE_HOST'] %>
