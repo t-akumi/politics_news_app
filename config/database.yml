@@ -83,10 +83,11 @@ test:
 #
 production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  host: <%= ENV['DATABASE_HOST'] %>
-  username: <%= ENV['DATABASE_USER'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  database: <%= ENV['DATABASE_NAME'] %>
-  port: <%= ENV['DATABASE_PORT'] || 5432 %>
+  url: <%= ENV['DATABASE_HOST'] %>
+  #adapter: postgresql
+  #encoding: unicode
+  #host: <%= ENV['DATABASE_HOST'] %>
+  #username: <%= ENV['DATABASE_USER'] %>
+  #password: <%= ENV['DATABASE_PASSWORD'] %>
+  #database: <%= ENV['DATABASE_NAME'] %>
+  #port: <%= ENV['DATABASE_PORT'] || 5432 %>
